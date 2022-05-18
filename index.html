@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>HomePage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  </head>
+
+  <body>
+    <header id="transparent-header">
+      <div class="destop-header">
+        <div class="background-header">
+          <div class="background-header__button">
+            <img
+              width="120px"
+              height="120px"
+              src="image/header-play.png"
+              alt=""
+            />
+          </div>
+          <img
+            id="background-header__image"
+            src="image/background-header.jpg"
+            alt=""
+          />
+          <div id="background-header__video">
+            <video width="100%" height="auto" id="bgVideo">
+              <source src="effect.mp4" type="video/mp4" />
+            </video>
+            <div class="background-header__video__close-button">
+              <img
+                width="60px"
+                height="60px"
+                src="image/header-close.png"
+                alt=""
+              />
+            </div>
+            <div class="background-header__video__mute-button">
+              <img
+                width="60px"
+                height="60px"
+                src="image/header-mute.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="menu-bar">
+          <div id="contact-nav">
+            <div class="container header__container">
+              <div class="row">
+                <div
+                  class="contact-nav__inner contact-nav--left col-12 col-sm-6"
+                >
+                  <ul class="contact-nav__hotline-mxh">
+                    <li class="contact-nav__tel">
+                      <a href="#"
+                        ><i class="fa fa-phone" aria-hidden="true"></i> +84 099
+                        310 344</a
+                      >
+                    </li>
+                    <li class="contact-nav__icon">
+                      <a href="#"
+                        ><i class="fa fa-facebook" aria-hidden="true"></i
+                      ></a>
+                    </li>
+                    <li class="contact-nav__icon">
+                      <a href="#"
+                        ><i class="fa fa-google-plus" aria-hidden="true"></i
+                      ></a>
+                    </li>
+                    <li class="contact-nav__icon">
+                      <a href="#"
+                        ><i class="fa fa-twitter" aria-hidden="true"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="contact-nav__inner contact-nav--right col-12 col-sm-6"
+                >
+                  <ul class="contact-nav__dangnhap text-right">
+                    <li><a href="#">Đăng nhập</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <nav id="main-nav">
+            <div class="container header__container">
+              <ul class="main-nav__container main-nav--left">
+                <li><a href="#">TRANG CHỦ</a></li>
+                <li><a href="#">TOURS</a></li>
+                <li><a href="#">TỰ THIẾT KẾ</a></li>
+              </ul>
+              <div class="logo"><img src="image/logo.png" alt="logo" /></div>
+              <ul class="main-nav__container main-nav--right pull-right">
+                <li><a href="#">TIN TỨC</a></li>
+                <li><a href="#">SỰ KIỆN</a></li>
+                <li><a href="#">TÀI KHOẢN</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!--end destop-header-->
+      <div class="mobile-header">
+        <div class="m-header-block">
+          <div>
+            <div class="open-nav">
+              <img id="open-btn" src="image/open.png" alt="open nav" onclick="open_navigator()">
+            </div>
+            <div class="m-header-img">
+              <img src="image/logo.png" alt="logo" />
+            </div>
+          </div>
+        </div>
+        <div class="m-menu">
+          <div class="m-menu-name">
+            <p>TRUNGVIVU</p>
+            <img src="image/close.png" alt="close nav" onclick="close_navigator()">
+          </div>
+          <ul class="m-menu-list">
+            <li><a href="#">TRANG CHỦ</a></li>
+            <li><a href="#">TOURS</a></li>
+            <li><a href="#">TỰ THIẾT KẾ</a></li>
+            <li><a href="#">TIN TỨC</a></li>
+            <li><a href="#">SỰ KIỆN</a></li>
+            <li><a href="#">TÀI KHOẢN</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--endmobile header-->
+    </header>
+    <main id="main-wrapper">
+      <section id="section-select">
+        <div id="tab-1" class="container-fluid">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active ksan" data-toggle="tab" href="#ksan"
+                ><img
+                  class="icon-tab-item"
+                  src="image/icon_building.png"
+                  alt=""
+                />KHÁCH SẠN</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="tour nav-link" data-toggle="tab" href="#tour"
+                ><img
+                  class="icon-tab-item"
+                  src="image/icon_walk.png"
+                  alt=""
+                />TOUR</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="datve nav-link" data-toggle="tab" href="#datve"
+                ><img
+                  class="icon-tab-item"
+                  src="image/icon_ticket.png"
+                  alt=""
+                />ĐẶT VÉ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="thuexe nav-link" data-toggle="tab" href="#thuexe"
+                ><img
+                  class="icon-tab-item"
+                  src="image/icon_car.png"
+                  alt=""
+                />THUÊ XE</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div id="ksan" class="container tab-pane active">
+              <h4 class="tab-1__tab-title">
+                TÌM <span class="wavy-under wavy-under-white">KHÁCH SẠN</span>
+              </h4>
+              <form action="" name="thuexe">
+                <div class="row">
+                  <div class="select-list col col-12 col-lg-4">
+                    <select>
+                      <option hidden value="-1">Địa Điểm ?</option>
+                      <option value="danang">Thành Phố Đà Nẵng</option>
+                      <option value="hoian">Thành Phố Hội An</option>
+                      <option value="hue">Thành Phố Huế</option>
+                    </select>
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input class="date-picker" placeholder="Thời gian đi" />
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input
+                      class="date-picker"
+                      placeholder="Thời gian khứ hồi"
+                    />
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input type="text" placeholder="Khoảng gía" />
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input
+                      type="button"
+                      name="ksan_search"
+                      value="Tìm kiếm"
+                      onclick=""
+                    />
+                  </div>
+                </div>
+                <!-- end row input -->
+              </form>
+              <!--endform tab-1-->
+            </div>
+            <!--end tab khach san-->
+            <div id="tour" class="container tab-pane">
+              <h4 class="tab-1__tab-title">
+                TÌM <span class="wavy-under wavy-under-white">TOUR</span>
+              </h4>
+              <form action="" name="thuexe">
+                <div class="row">
+                  <div class="col col-12 col-lg-4">
+                    <select>
+                      <option hidden value="-1">Địa Điểm ?</option>
+                      <option value="danang">Thành Phố Đà Nẵng</option>
+                      <option value="hoian">Thành Phố Hội An</option>
+                      <option value="hue">Thành Phố Huế</option>
+                    </select>
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input class="date-picker" placeholder="Thời gian đi" />
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input
+                      class="date-picker"
+                      placeholder="Thời gian khứ hồi"
+                    />
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input type="text" placeholder="Khoảng gía" />
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input
+                      type="button"
+                      name="ksan_search"
+                      value="Tìm kiếm"
+                      onclick=""
+                    />
+                  </div>
+                </div>
+                <!-- end row input -->
+              </form>
+            </div>
+            <!--end tab tour-->
+            <div id="datve" class="container tab-pane">
+              <h4 class="tab-1__tab-title">
+                ĐẶT <span class="wavy-under wavy-under-white">VÉ</span>
+              </h4>
+              <form action="" name="thuexe">
+                <div class="row">
+                  <div class="col col-12 col-lg-4">
+                    <select>
+                      <option hidden value="-1">Địa Điểm ?</option>
+                      <option value="danang">Thành Phố Đà Nẵng</option>
+                      <option value="hoian">Thành Phố Hội An</option>
+                      <option value="hue">Thành Phố Huế</option>
+                    </select>
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input class="date-picker" placeholder="Thời gian đi" />
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input
+                      class="date-picker"
+                      placeholder="Thời gian khứ hồi"
+                    />
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input type="text" placeholder="Khoảng gía" />
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input
+                      type="button"
+                      name="ksan_search"
+                      value="Tìm kiếm"
+                      onclick=""
+                    />
+                  </div>
+                </div>
+                <!-- end row input -->
+              </form>
+            </div>
+            <!--end tab dat ve-->
+            <div id="thuexe" class="container tab-pane">
+              <h4 class="tab-1__tab-title">
+                THUÊ <span class="wavy-under wavy-under-white">XE</span>
+              </h4>
+              <form action="" name="thuexe">
+                <div class="row">
+                  <div class="col col-12 col-lg-4">
+                    <select>
+                      <option hidden value="-1">Địa Điểm ?</option>
+                      <option value="danang">Thành Phố Đà Nẵng</option>
+                      <option value="hoian">Thành Phố Hội An</option>
+                      <option value="hue">Thành Phố Huế</option>
+                    </select>
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input class="date-picker" placeholder="Thời gian đi" />
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input
+                      class="date-picker"
+                      placeholder="Thời gian khứ hồi"
+                    />
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input type="text" placeholder="Khoảng gía" />
+                  </div>
+                  <div class="col col-6 col-lg-2">
+                    <input
+                      type="button"
+                      name="ksan_search"
+                      value="Tìm kiếm"
+                      onclick=""
+                    />
+                  </div>
+                </div>
+                <!-- end row input -->
+              </form>
+            </div>
+            <!--end tab thue xe-->
+          </div>
+        </div>
+      </section>
+      <section id="why-choose">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-6 section-title">
+              <h1 class="main-title">
+                TẠI SAO
+                <span class="wavy-under wavy-under-black"
+                  >CHỌN&nbspCHÚNG&nbspTÔI</span
+                >
+              </h1>
+              <em class="sub-title"
+                >Quay về truyền thống, tinh hoa dân tộc, chúng tôi đưa đến bạn
+                những&nbsptrải&nbspnghiệm chân thật nhất của văn hóa người Việt.
+              </em>
+            </div>
+          </div>
+          <div class="row why-content">
+            <div class="col col-12 col-sm-6 col-lg-3">
+              <div class="col-inner">
+                <h2 class="why-content__title">
+                  10 NĂM <span>KINH NGHIỆM</span>
+                </h2>
+                <div class="why-content__icon">
+                  <img src="image/ten_years_exps_icon.png" alt="" />
+                </div>
+                <div class="why-content__paragraph">
+                  <p>
+                    Kinh nghiệm của mình, chúng tôi tự tin phục vụ quý khách.
+                  </p>
+                  <p>Thực hiền hơn 2356 tours</p>
+                  <p>
+                    Nhận được nhiều ý kiến phản hồi tốt của khách hàng trong
+                    chuyến.
+                  </p>
+                  <p>Hơn 2031 nhà đồng hành cùng.</p>
+                </div>
+                <div class="why-content__button">
+                  <input
+                    type="button"
+                    name="why-content__button"
+                    value="Xem Thêm"
+                    onclick=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col col-12 col-sm-6 col-lg-3">
+              <div class="col-inner">
+                <h2 class="why-content__title">
+                  CẬP NHẬT <span>SỰ KIỆN</span>
+                </h2>
+                <div class="why-content__icon">
+                  <img src="image/update_event_icon.png" alt="" />
+                </div>
+                <div class="why-content__paragraph">
+                  <p>Cập nhật sự kiện mới nhanh nhất, rẻ nhất của năm.</p>
+                  <p>Tặng kèm sản phẩm sự kiện.</p>
+                  <p>
+                    Không tính thêm thuế hay dịch vụ ngoài các sự kiện chính.
+                  </p>
+                  <p>Hơn 10.3654 vé bán ra trong năm.</p>
+                </div>
+                <div class="why-content__button">
+                  <input
+                    type="button"
+                    name="why-content__button"
+                    value="Xem Thêm"
+                    onclick=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col col-12 col-sm-6 col-lg-3">
+              <div class="col-inner">
+                <h2 class="why-content__title">
+                  CHỦ ĐỘNG <span>THIẾT KẾ TOUR</span>
+                </h2>
+                <div class="why-content__icon">
+                  <img src="image/tour_design_icon.png" alt="" />
+                </div>
+                <div class="why-content__paragraph">
+                  <p>
+                    Tạo hành trình riêng bạn theo cách của bạn và người thân.
+                  </p>
+                  <p>Thoải mái chuyến đi xa.</p>
+                  <p>Thủ tục gọn gàng đơn giản, không thu thuế thêm.</p>
+                  <p>Hơn 13.535 chuyến đi thực hiện.</p>
+                </div>
+                <div class="why-content__button">
+                  <input
+                    type="button"
+                    name="why-content__button"
+                    value="Xem Thêm"
+                    onclick=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col col-12 col-sm-6 col-lg-3">
+              <div class="col-inner">
+                <h2 class="why-content__title">
+                  TIẾT KIỆM <span>TỐI&nbspĐA</span>
+                </h2>
+                <div class="why-content__icon">
+                  <img src="image/save_money_icon.png" alt="" />
+                </div>
+                <div class="why-content__paragraph">
+                  <p>Tiết kiệm tối đa cho bạn và người thân.</p>
+                  <p>Các hóa đơn không thêm phí.</p>
+                  <p>Không thu thuế thêm có thẻ thanh toán nhỏ.</p>
+                  <p>Hơn 13.535 chuyến đi thực hiện.</p>
+                </div>
+                <div class="why-content__button">
+                  <input
+                    type="button"
+                    name="why-content__button"
+                    value="Xem Thêm"
+                    onclick=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="two-selection">
+        <div class="container">
+          <div class="row two-selection__row-background justify-content-center">
+            <div class="col-12 col-lg-6">
+              <div class="row justify-content-center section-title">
+                <div class="col-12">
+                  <h1 class="main-title">
+                    2 SỰ LỰA CHỌN
+                    <span class="wavy-under wavy-under-black">CHO&nbspBẠN</span>
+                  </h1>
+                  <em class="sub-title"
+                    >Chúng ta có tours sẵn hoặc bạn có thể thiết kế cho mình một
+                    tour theo ý của bạn</em
+                  >
+                </div>
+              </div>
+              <div class="row justify-content-center two-selection__content">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <div class="two-selection__content__block__item">
+                        <h2>TOURS</h2>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="two-selection__content__block__item">
+                        <h2>THIẾT KẾ TOUR</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="beautyful-place">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-6 section-title">
+              <h1 class="main-title">
+                CẢNH SẮC
+                <span class="wavy-under wavy-under-black">MIỀN&nbspTRUNG</span>
+              </h1>
+              <em class="sub-title"
+                >Chúng tôi xin giới thiệu khách hàng yêu quý của mình các địa
+                điểm du lịch đậm chất dân tộc Việt Nam. Để có thể cảm nhận rõ
+                hơn, mời bạn vào thăm các địa điểm của TRUNGVIVU.</em
+              >
+            </div>
+          </div>
+          <div class="row beautyful-place__content">
+            <div class="col-12 col-lg-4">
+              <div class="beautyful-place__content__item danang">
+                <div class="content-circle">
+                  <img src="image/danang-circle.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="beautyful-place__content__item hoian">
+                <div class="content-circle">
+                  <img src="image/hoian-circle.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="beautyful-place__content__item hue">
+                <div class="content-circle">
+                  <img src="image/hue-circle.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="achievements">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-6 section-title">
+              <h1 class="main-title">
+                THÀNH TÍCH
+                <span class="wavy-under wavy-under-black"
+                  >HƠN&nbsp5&nbspNĂM&nbspQUA</span
+                >
+              </h1>
+              <em class="sub-title"
+                >Cảm ơn quý khách hàng đã luôn đồng hành cùng TRUNGVIVU để thực
+                hiện những chuyến tour du lịch nhiều kỉ niệm và thành công.
+                Chúng tôi sẽ luôn ở đây để phục vụ quý khách.</em
+              >
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="achievements__content-block row">
+            <div class="achievements__content-block__item col-12 col-lg-4">
+              <h2 class="achievements__content-block__item__number">2356</h2>
+              <h4 class="achievements__content-block__item__content">
+                SỐ TOUR ĐÃ&nbspTHỰC&nbspHIỆN
+              </h4>
+            </div>
+            <div class="achievements__content-block__item col-12 col-lg-4">
+              <h2 class="achievements__content-block__item__number">52</h2>
+              <h4 class="achievements__content-block__item__content">
+                GIẢI THƯỞNG TOUR UY TÍN, CHẤT&nbspLƯỢNG
+              </h4>
+            </div>
+            <div class="achievements__content-block__item col-12 col-lg-4">
+              <h2 class="achievements__content-block__item__number">1873</h2>
+              <h4 class="achievements__content-block__item__content">
+                LƯỢT TRUY&nbspCẬP
+              </h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="activity">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-6 section-title">
+              <h1 class="main-title">
+                HOẠT ĐỘNG
+                <span class="wavy-under wavy-under-black">TRONG&nbspTOUR</span>
+              </h1>
+              <em class="sub-title"
+                >Chúng tôi xin gửi đến quý khách hàng những hoạt động có trong
+                tour của mình. Để khách hàng có thể tự mình trãi nghiệm những
+                ngành nghề truyền thống của dân Việt, hay những hoạt động nổi
+                tiếng ở thành phố của ta.</em
+              >
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="activity__content">
+            <div class="activity__content__item item-1 col col-12 col-lg">
+              <div class="activity__content__item-bg">
+                <img src="image/activity-1.png" alt="" />
+              </div>
+              <div class="activity__content__item__content">
+                <h2 class="activity__content__item__content__title">
+                  DU LỊCH BIỂN VÀ HOẠT ĐỘNG BIỂN <span>ĐÀ&nbspNẴNG</span>
+                </h2>
+                <div class="activity__content__item__content__main">
+                  <h3>BIỂN KHÊ CÁT VÀNG</h3>
+                  <div class="activity__content__item__content__main__button">
+                    LƯỚT VÁN TRÊN BIỂN
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="activity__content__item item-2 col col-12 col-lg">
+              <div class="activity__content__item-bg">
+                <img src="image/activity-2.png" alt="" />
+              </div>
+              <div class="activity__content__item__content">
+                <h2 class="activity__content__item__content__title">
+                  DU LỊCH BIỂN VÀ HOẠT ĐỘNG BIỂN <span>ĐÀ&nbspNẴNG</span>
+                </h2>
+                <div class="activity__content__item__content__main">
+                  <h3>BIỂN GHỀNH BẰNG</h3>
+                  <div class="activity__content__item__content__main__button">
+                    THẾ GIỚI ĐẠI DƯƠNG
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="activity__content__item item-3 col col-12 col-lg">
+              <div class="activity__content__item-bg">
+                <img src="image/activity-3.png" alt="" />
+              </div>
+              <div class="activity__content__item__content">
+                <h2 class="activity__content__item__content__title">
+                  DU LỊCH PHỐ CỔ CỦA THÀNH PHỐ <span>HỘI&nbspAN</span>
+                </h2>
+                <div class="activity__content__item__content__main">
+                  <h3>NGHỆ THUẬT CỔ XƯA</h3>
+                  <div class="activity__content__item__content__main__button">
+                    TRÃI PHỐ CỔ ĐÈN LỒNG
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="activity__content__item item-4 col col-12 col-lg">
+              <div class="activity__content__item-bg">
+                <img src="image/activity-4.png" alt="" />
+              </div>
+              <div class="activity__content__item__content">
+                <h2 class="activity__content__item__content__title">
+                  DU LỊCH KINH THÀNH <span>THÀNH&nbspPHỐ&nbspHUẾ</span>
+                </h2>
+                <div class="activity__content__item__content__main">
+                  <h3>THÀNH PHỐ HỘI NHẬP</h3>
+                  <div class="activity__content__item__content__main__button">
+                    HÒA THANH ÁNH SÁNG
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="activity__content__item item-5 col col-12 col-lg">
+              <div class="activity__content__item-bg">
+                <img src="image/activity-5.png" alt="" />
+              </div>
+              <div class="activity__content__item__content">
+                <h2 class="activity__content__item__content__title">
+                  DU LỊCH PHỐ CỔ CỦA THÀNH PHỐ <span>HỘI&nbspAN</span>
+                </h2>
+                <div class="activity__content__item__content__main">
+                  <h3>NGHỆ THUẬT GIA TRUYỀN</h3>
+                  <div class="activity__content__item__content__main__button">
+                    KHÁM PHÁ LÀNG GỐM LÂU ĐỜI
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="bg-overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="fotter-logo"><img src="image/logo.png" alt="" /></div>
+            </div>
+            <div class="col-12 col-lg-3">
+              <ul>
+                <li>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>0313 St.
+                  Stroman Wall Apt. 503 344 Thành Thái, Quận 10, Tp HCM
+                </li>
+                <li>
+                  <i class="fa fa-phone" aria-hidden="true"></i>88.6249897 -
+                  88.9654321
+                </li>
+                <li>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>trungvivu.com
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-5">
+              <div class="col-inner d-flex flex-column align-items-center">
+                <ul class="city-list">
+                  <li>
+                    <i class="fa fa-circle" aria-hidden="true"></i>Thành phố Đà
+                    Nẵng
+                  </li>
+                  <li>
+                    <i class="fa fa-circle" aria-hidden="true"></i>Thừa Thiên
+                    Huế
+                  </li>
+                  <li>
+                    <i class="fa fa-circle" aria-hidden="true"></i>Thành phố Hội
+                    An
+                  </li>
+                </ul>
+                <ul class="social-list">
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-facebook" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-pinterest-p" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-google-plus" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 text-lg-right">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/i1IKnWDecwA"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="cooperate">
+          <div class="cooperate-logo">
+            <img src="image/cooperate.png" alt="logo footer" />
+          </div>
+          <div class="cooperate-overlay"></div>
+        </div>
+        <div class="copyright">© 2017 TRUNGVIVU.VietNam.com</div>
+      </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--Jquery UI -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
